@@ -1,0 +1,101 @@
+@import "variables.css";
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 !important;
+    background-color: #f0f0f0;
+}
+
+/* RESET */
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+body > *{
+    width: 100%;
+}
+
+/* STYLES */
+.header{
+    text-align: center;
+    background-color: var(--main-color);
+    padding: 15px 0;
+    color: #fff;
+}
+
+/* NAV */
+.nav{
+    background-color: #cccccc;
+    margin-bottom: 12px;
+}
+
+.nav__bar{
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    color: #fff;
+}
+
+.nav__bar > a { color: #fff; }
+.nav__bar > img {filter: invert(99%) sepia(72%) saturate(562%) hue-rotate(201deg) brightness(116%) contrast(100%);}
+
+.nav__links{
+    padding: 10px 20px !important;
+    padding-top: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #e2e2e2;
+}
+
+.nav__links li{
+    padding: 5px 0;
+}
+
+.nav img{
+    width: 10px;
+    height: auto;
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+}
+
+.nav--active .nav__links{
+    display: block;
+}
+
+/* CONTENT */
+.content{
+    padding: 0 10px;
+}
+
+.result{
+    margin-top: 20px;
+}
+
+/* FORM STYLES */
+.text-input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 7px;
+}
+
+.button{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 7px;
+    background-color: var(--second-color);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
