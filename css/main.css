@@ -3,20 +3,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     margin: 0 !important;
-    background-color: #f0f0f0;
-}
-
-/* RESET */
-*{
-    box-sizing: border-box;
-}
-
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
-}
-
-body > *{
-    width: 100%;
+    background-color: #e2e2e2;
 }
 
 /* STYLES */
@@ -28,32 +15,34 @@ body > *{
 }
 
 /* NAV */
-.nav{
-    background-color: #cccccc;
-    margin-bottom: 12px;
-}
-
 .nav__bar{
     padding: 10px 20px;
     background-color: var(--second-color);
     color: #fff;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
-
-.nav__bar > a { color: #fff; }
 .nav__bar > img {filter: invert(99%) sepia(72%) saturate(562%) hue-rotate(201deg) brightness(116%) contrast(100%);}
 
 .nav__links{
-    padding: 10px 20px !important;
-    padding-top: 0;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none;
+    height: 0;
     background-color: #e2e2e2;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    transition: height 0.2s linear;
 }
 
 .nav__links li{
     padding: 5px 0;
+    margin-left: 10px;
+}
+.nav__links li:first-child{
+    margin-top: 10px;
 }
 
 .nav img{
@@ -68,15 +57,64 @@ body > *{
 
 .nav--active .nav__links{
     display: block;
+    height: 100px;
+}
+
+.nav--active .nav__bar { border-radius: 0; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+.nav__bar > img { transition: all 0.2s linear}
+.nav--active .nav__bar > img{
+    transform: rotateZ(90deg);
 }
 
 /* CONTENT */
-.content{
-    padding: 0 10px;
+.result{
+    margin-top: 15px;
 }
 
-.result{
-    margin-top: 20px;
+.article{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.article ul{
+    padding-left: 25px;
+}
+
+.article h2{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+.container > *{
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+@media(min-width:950px){
+    .container{
+        flex-direction: row;
+    }
+    .container > *{
+        width: 45%;
+    }
+    .nav__links{
+        display: block;
+    }
 }
 
 /* FORM STYLES */
