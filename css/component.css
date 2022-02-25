@@ -5,7 +5,6 @@
 }
 
 .nav__bar > a { color: #fff; }
-.nav__bar > img {filter: invert(99%) sepia(72%) saturate(562%) hue-rotate(201deg) brightness(116%) contrast(100%);}
 
 @media(min-width: 600px){
     .nav__bar{
