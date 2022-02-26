@@ -1,0 +1,43 @@
+/* CUSTOM WINDOWS */
+.window--active.nav .window__content{
+        height:100px;
+    }
+    .window--active.updates .window__content{
+        height:180px;
+    }
+
+@media(min-width:400px){
+    .window--active.nav .window__content{
+        height:100px;
+    }
+    .window--active.updates .window__content{
+        height:150px;
+    }
+}
+
+/* Nav */
+.nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    padding: 5px 0;
+    margin-left: 10px;
+}
+
+.nav img{
+    width: 10px;
+    height: auto;
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Updates */
+.updates ul{
+    padding-left: 21px;
+}
