@@ -31,23 +31,24 @@
                 <a href="./../../">Menu</a>
             </header>
             <div class="window__content">
-                
+
             </div>
         </nav>
-        
-        <main class="window window--active molecule_mass">
+
+        <main class="window window--active reactions_calc">
             <header class="window__title">
-                Masa cząsteczkowa
+                Kalkulator reakcji
             </header>
             <div class="window__content">
                 <div class="window__content_handler">
                     <form>
-                        <input type="text" id="molecule" class="text-input" placeholder="H2O">
-                        <input type="button" value="Oblicz" class="button">
+                        <input type="text" class="text-input" id="substraty" placeholder="Substraty">
+                        <input type="text" class="text-input" id="produkty" placeholder="Produkty">
+                        <input type="button" value="Uzgodnij" class="button" id="btn">
                     </form>
-                    
-                    <div class="result">
-                    
+
+                    <div class="result" id="result">
+
                     </div>
                 </div>
             </div>
@@ -56,4 +57,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
