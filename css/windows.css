@@ -1,18 +1,22 @@
 /* CUSTOM WINDOWS */
-.window--active.nav .window__content{
-        height:100px;
-    }
-    .window--active.updates .window__content{
-        height:180px;
-    }
 
-@media(min-width:400px){
-    .window--active.nav .window__content{
-        height:100px;
-    }
-    .window--active.updates .window__content{
-        height:150px;
-    }
+.window--active.grid-row-1{
+    grid-row: span 1;
+}
+.window--active.grid-row-2{
+    grid-row: span 2;
+}
+.window--active.grid-row-3{
+    grid-row: span 3;
+}
+.window--active.grid-row-4{
+    grid-row: span 4;
+}
+.window--active.grid-row-5{
+    grid-row: span 5;
+}
+.window--active.grid-row-6{
+    grid-row: span 6;
 }
 
 /* Nav */
@@ -40,4 +44,5 @@
 /* Updates */
 .updates ul{
     padding-left: 21px;
+    margin: 20px 0;
 }

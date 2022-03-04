@@ -3,7 +3,7 @@ const resultBox = document.getElementById("result");
 const substratyBox = document.getElementById("substraty");
 const produktyBox = document.getElementById("produkty");
 
-let debug = false;
+let debug = true;
 
 btn.addEventListener("click", () => {
     let substratyStr = substratyBox.value;
@@ -143,6 +143,7 @@ const createTab = (str) => {
 
             if(elName == ")"){
                 j++;
+                wsp = 1;
                 continue;
             }
 
@@ -298,15 +299,26 @@ const checkDoubleElements = (str) => {
 
     let tab = str.split('+');
     for (let i = 0; i < tab.length; i++) {
-        if(!isNaN(tab[i][0] * 1)){
-            if (isDouble(tab[i])){
-                tab[i].splice(2, 0, "2")
-            }
+        let name;
+        let pos = 1;
+
+        // check wsp
+        if (!isNaN(tab[i][0] * 1)) {
+            name = tab[i].substring(1);
+            pos += 1;
         }else{
-            if (isDouble(tab[i])) {
-                tab[i] = tab[i].splice(1, 0, "2")
-            }
-        } 
+            name = tab[i];
+        }
+
+        // check for double letters
+        if (name.length > 1) {
+            pos += 1
+        }
+
+        // excute
+        if (isDouble(name)) {
+            tab[i] = tab[i].splice(pos, 0, "2")
+        }
     }
 
     return tab.join("+");
