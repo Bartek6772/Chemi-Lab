@@ -18,6 +18,15 @@
 .window--active.grid-row-6{
     grid-row: span 6;
 }
+.window--active.grid-row-7{
+    grid-row: span 7;
+}
+.window--active.grid-row-8{
+    grid-row: span 8;
+}
+.window--active.grid-row-9{
+    grid-row: span 9;
+}
 
 /* Nav */
 .nav ul{
