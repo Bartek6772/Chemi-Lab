@@ -130,7 +130,7 @@ tr td:last-child {
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .button{
@@ -143,4 +143,12 @@ tr td:last-child {
     color: #fff;
     font-size: 1rem;
     outline: none;
+}
+
+.radio-box{
+    margin: 10px 0;
+}
+
+.radio{
+
 }
