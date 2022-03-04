@@ -31,29 +31,48 @@
                 <a href="./../../">Menu</a>
             </header>
             <div class="window__content">
-                
+
             </div>
         </nav>
-        
-        <main class="window window--active molecule_mass grid-row-2">
+
+        <main class="window window--active reactions_calc grid-row-3">
             <header class="window__title">
-                Masa cząsteczkowa
+                Kalkulator reakcji
             </header>
             <div class="window__content">
                 <div class="window__content__handler">
                     <form>
-                        <input type="text" id="molecule" class="text-input" placeholder="H2O">
-                        <input type="button" value="Oblicz" class="button">
+                        <input type="text" class="text-input" id="substraty" placeholder="Substraty">
+                        <input type="text" class="text-input" id="produkty" placeholder="Produkty">
+                        <input type="button" value="Uzgodnij" class="button" id="btn">
                     </form>
-                    
-                    <div class="result">
-                    
+
+                    <div class="result" id="result">
+                        
                     </div>
                 </div>
             </div>
         </main>
+
+        <section class="window window--active info grid-row-2">
+            <header class="window__title">Informacje</header>
+            <div class="window__content">
+                <div class="window__content__handler">
+                    <p>
+                        Przykładowa forma zapisu:<br>substraty: H+O<br>produkty: H2O
+                    </p>
+                    <p>
+                        Jeżli uzgodniona reakcja nie wyświtla sie w całości możesz ją przewijać na boki.
+                    </p>
+                    <p>
+                        Program nie obsługuje liczb atomów większych niż 9 np. <span style="color: red">H<sub>10</sub></span>
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script src="main.js"></script>
 </body>
+
 </html>
