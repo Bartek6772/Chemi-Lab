@@ -1,13 +1,5 @@
 @import "variables.css";
 
-.window--active.molecule_mass .window__content{
-    height: 160px;
-}
-
-.window--active.reactions_calc .window__content{
-    height: 200px;
-}
-
 .window--active.reactions_calc .window__content span{
     color: var(--second-color);
 }
