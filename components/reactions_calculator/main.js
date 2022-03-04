@@ -3,7 +3,7 @@ const resultBox = document.getElementById("result");
 const substratyBox = document.getElementById("substraty");
 const produktyBox = document.getElementById("produkty");
 
-let debug = true;
+let debug = false;
 
 btn.addEventListener("click", () => {
     let substratyStr = substratyBox.value;

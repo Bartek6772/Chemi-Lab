@@ -31,23 +31,32 @@
                 <a href="./../../">Menu</a>
             </header>
             <div class="window__content">
-                
+
             </div>
         </nav>
-        
+
         <main class="window window--active molecule_mass grid-row-2">
             <header class="window__title">
-                Masa cząsteczkowa
+                Stosunek
             </header>
             <div class="window__content">
                 <div class="window__content__handler">
-                    <form>
-                        <input type="text" id="molecule" class="text-input" placeholder="H2O">
-                        <input type="button" value="Oblicz" class="button">
+                    <form id="form">
+                        <input type="text" id="element" class="text-input" placeholder="Pierwiastek">
+                        <input type="text" id="molecule" class="text-input" placeholder="Cząsteczka">
+                        
+                        <div class="radio-box">
+                            <input type="radio" name="dataType" id="mass" class="radio" value="mass">
+                            <label for="mass">Masa</label>
+                            <input type="radio" name="dataType" id="percentage" class="radio" value="percentage">
+                            <label for="percentage">Procent</label>
+                        </div>
+
+                        <input type="button" value="Oblicz" class="button" id="btn">
                     </form>
-                    
-                    <div class="result">
-                    
+
+                    <div class="result" id="result">
+
                     </div>
                 </div>
             </div>
@@ -57,4 +66,5 @@
     <script src="./../../data/elements-mass.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
