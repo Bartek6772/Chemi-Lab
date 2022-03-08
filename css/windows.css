@@ -55,3 +55,14 @@
     padding-left: 21px;
     margin: 20px 0;
 }
+
+/* Result hydrocarbons */
+.hydrocarbons .result{
+    height: 180px;
+    background-color: #fff;
+    position: relative;
+}
+
+.hydrocarbons .result > div{
+    position: absolute;
+}

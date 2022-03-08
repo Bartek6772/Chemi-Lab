@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="./../../css/reset.css">
+    <link rel="stylesheet" href="./../../css/reset.css">
     <link rel="stylesheet" href="./../../css/main.css">
     <link rel="stylesheet" href="./../../css/component.css">
     <link rel="stylesheet" href="./../../css/windows.css">
@@ -35,24 +35,23 @@
             </div>
         </nav>
 
-        <main class="window window--active grid-row-2">
+        <main class="window window--active hydrocarbons grid-row-2">
             <header class="window__title">
-                Stosunek
+                Weglowodory
             </header>
             <div class="window__content">
                 <div class="window__content__handler">
                     <form id="form">
-                        <input type="text" id="element" class="text-input" placeholder="Pierwiastek" required="required">
-                        <input type="text" id="molecule" class="text-input" placeholder="Cząsteczka" required="required">
-                        
-                        <div class="radio-box">
-                            <input type="radio" name="dataType" id="mass" class="radio" value="mass">
-                            <label for="mass">Masa</label>
-                            <input type="radio" name="dataType" id="percentage" class="radio" value="percentage">
-                            <label for="percentage">Procent</label>
-                        </div>
+                        <input type="text" id="molecule" class="text-input" placeholder="Węglowodór" required="required">
 
-                        <input type="button" value="Oblicz" class="button" id="btn">
+                        <!-- <div class="radio-box">
+                            <input type="radio" name="dataType" id="mass" class="radio" value="mass">
+                            <label for="mass">Strukturalny</label>
+                            <input type="radio" name="dataType" id="percentage" class="radio" value="percentage">
+                            <label for="percentage">Półstrukturalny</label>
+                        </div> -->
+
+                        <input type="button" value="Rysuj" class="button" id="btn">
                     </form>
 
                     <div class="result" id="result">
