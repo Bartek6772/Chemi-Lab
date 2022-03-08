@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="./../../css/reset.css">
+    <link rel="stylesheet" href="./../../css/reset.css">
     <link rel="stylesheet" href="./../../css/main.css">
     <link rel="stylesheet" href="./../../css/component.css">
     <link rel="stylesheet" href="./../../css/windows.css">
@@ -31,23 +31,31 @@
                 <a href="./../../">Menu</a>
             </header>
             <div class="window__content">
-                
+
             </div>
         </nav>
-        
-        <main class="window window--active molecule_mass grid-row-2">
+
+        <main class="window window--active hydrocarbons grid-row-2">
             <header class="window__title">
-                Masa cząsteczkowa
+                Weglowodory
             </header>
             <div class="window__content">
                 <div class="window__content__handler">
-                    <form>
-                        <input type="text" id="molecule" class="text-input" placeholder="H2O" required="required">
-                        <input type="button" value="Oblicz" class="button">
+                    <form id="form">
+                        <input type="text" id="molecule" class="text-input" placeholder="Węglowodór" required="required">
+
+                        <!-- <div class="radio-box">
+                            <input type="radio" name="dataType" id="mass" class="radio" value="mass">
+                            <label for="mass">Strukturalny</label>
+                            <input type="radio" name="dataType" id="percentage" class="radio" value="percentage">
+                            <label for="percentage">Półstrukturalny</label>
+                        </div> -->
+
+                        <input type="button" value="Rysuj" class="button" id="btn">
                     </form>
-                    
-                    <div class="result">
-                    
+
+                    <div class="result" id="result">
+
                     </div>
                 </div>
             </div>
@@ -57,4 +65,5 @@
     <script src="./../../data/elements-mass.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
