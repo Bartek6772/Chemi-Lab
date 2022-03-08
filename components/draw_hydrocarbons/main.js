@@ -101,7 +101,38 @@ const draw = (tab, group) => {
         }
     } else if (group == 3) {
         // TODO alkiny
-    
+        for (let i = 0; i < c; i++) {
+
+            if (i == 0) {
+                result.innerHTML += `<div style="top:${y}px;left:${x}px">${"H ---- "}</div>`;
+                x += 45;
+                result.innerHTML += `<div style="top:${y}px;left:${x}px">C</div>`;
+                result.innerHTML += `<div style="top:${y - 4}px;left:${x + 15}px">----</div>`;
+                result.innerHTML += `<div style="top:${y}px;left:${x + 15}px">----</div>`;
+                result.innerHTML += `<div style="top:${y + 4}px;left:${x + 15}px">----</div>`;
+            } else {
+                result.innerHTML += `<div style="top:${y}px;left:${x}px">${"C ---- "}</div>`;
+            }
+
+            if (i > 1){
+                if (pars > 0) {
+                    result.innerHTML += `<div style="top:${y - 50}px;left:${x}px">${other}<br>|</div>`;
+                    result.innerHTML += `<div style="top:${y + 20}px;left:${x}px">|<br>${other}</div>`;
+                    pars--;
+                } else {
+                    result.innerHTML += `<div style="top:${y - 50}px;left:${x}px">H<br>|</div>`;
+                    result.innerHTML += `<div style="top:${y + 20}px;left:${x}px">|<br>H</div>`;
+                }
+            }
+
+            x += 45;
+
+            if (i + 1 == c) {
+                // for last
+                result.innerHTML += `<div style="top:${y}px;left:${x}px">${"H"}</div>`;
+            }
+
+        }
     }
     
 }
