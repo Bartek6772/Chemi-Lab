@@ -156,26 +156,30 @@ const createTab = (str) => {
             }
 
             // Is double letter
-            let isSmall = false;
             if(molName[j+1] != null){
                 if(molName[j+1] != "(" && molName[j+1] != ")" && isNaN(molName[j + 1] * 1)){
                     var a = molName[j+1];
                     var b = a.toLowerCase();
 
-                    isSmall = (a == b);
+                    if (a == b) {
+                        elName += molName[j + 1];
+                        j++;
+                    }
                 }
             }
 
             // Element amount
-            if(isSmall){
-                elName += molName[j+1];
-                j++;
-            }
-
             if (molName[j + 1] != null) {
                 if (!isNaN(molName[j + 1] * 1)) {
                     elAmount = parseInt(molName[j + 1]);
                     j++;
+
+                    if (molName[j + 1] != null) {
+                        if (!isNaN(molName[j + 1] * 1)) {
+                            elAmount = elAmount * 10 + parseInt(molName[j + 1]);
+                            j++;
+                        }
+                    }
                 }
             }
             

@@ -64,26 +64,24 @@ const calculate = (mol, element) => {
             continue;
         }
 
-        let isSmall = false;
         if (mol[i + 1] != null) {
-            if (mol[i + 1] != ")" && mol[i + 1] != "(") {
+            if (mol[i + 1] != ")" && mol[i + 1] != "(" && isNaN(mol[i + 1] * 1)) {
                 var a = mol[i + 1];
                 var b = a.toLowerCase();
 
-                isSmall = a == b;
+                if(a == b){
+                    el = mol[i] + mol[i + 1];
+                    i++;
+                }
             }
         }
 
         if (!isNaN(mol[i + 1] * 1)) {
-            num = mol[i + 1];
-            i++;
-        }
-        else if (isSmall) {
-            el = mol[i] + mol[i + 1];
+            num = parseInt(mol[i + 1]);
             i++;
 
             if (!isNaN(mol[i + 1] * 1)) {
-                num = mol[i + 1];
+                num = num * 10 + parseInt(mol[i + 1]);
                 i++;
             }
         }
