@@ -1,7 +1,25 @@
 :root {
-    --main-color: #388E3C;
-    --second-color: #49ac4d;
+    /* --main-color: #388E3C; */
+    /* --second-color: #499aac; */
+    /* --second-color: #127d95; */
+    --green-theme: #49ac4d;
+    --blue-theme: #297789;
+    --dark-theme: #1e1c1c;
 
     --box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.4);
     --table-border: 2px solid #ccc;
+}
+
+:root,
+:root.green{
+    --second-color: var(--green-theme);
+
+}
+
+:root.blue{
+    --second-color: var(--blue-theme) ;
+}
+
+:root.dark{
+    --second-color: var(--dark-theme) ;
 }

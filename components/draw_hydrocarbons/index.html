@@ -37,20 +37,12 @@
 
         <main class="window window--active hydrocarbons grid-row-2">
             <header class="window__title">
-                Weglowodory
+                Węglowodory
             </header>
             <div class="window__content">
                 <div class="window__content__handler">
                     <form id="form">
                         <input type="text" id="molecule" class="text-input" placeholder="Węglowodór" required="required">
-
-                        <!-- <div class="radio-box">
-                            <input type="radio" name="dataType" id="mass" class="radio" value="mass">
-                            <label for="mass">Strukturalny</label>
-                            <input type="radio" name="dataType" id="percentage" class="radio" value="percentage">
-                            <label for="percentage">Półstrukturalny</label>
-                        </div> -->
-
                         <input type="button" value="Rysuj" class="button" id="btn">
                     </form>
 
@@ -60,10 +52,28 @@
                 </div>
             </div>
         </main>
+
+        <section class="window window--active info grid-row-3">
+            <header class="window__title">Informacje</header>
+            <div class="window__content">
+                <div class="window__content__handler">
+                    <p>
+                        Przykładowe formy zapisu: C2H6, C3H6Br2, C10H18<br>(zamiast bromu w powyższych przykładach może być cokolwiek)
+                    </p>
+                    <p>
+                        Jeżli narysowany wzór nie wyświtla sie w całości możesz spróbować przewinąć go w bok.
+                    </p>
+                    <p>
+                        Program nie obsługuje liczb atomów większych niż 99 np. <span style="color: red">E<sub>100 </sub></span>
+                        <span style="color: green;margin-left:5px">E<sub>99</sub></span>
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <script src="./../../data/elements-mass.js"></script>
     <script src="main.js"></script>
+    <script src="./../../theme.js"></script>
 </body>
 
 </html>
