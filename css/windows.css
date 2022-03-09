@@ -56,6 +56,18 @@
     margin: 20px 0;
 }
 
+/* Settings */
+.settings .window__content__handler{
+    display: flex;
+}
+
+.theme-btn{
+    background-color: var(--green-theme);
+    padding:20px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
 /* Result hydrocarbons */
 .hydrocarbons .result{
     height: 200px;
