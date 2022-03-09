@@ -13,7 +13,6 @@ btn.addEventListener('click', () => {
     if(!isHydrocarbon(tab)) return;
 
     let group = getGroup(tab);
-    console.log(group);
 
     if(group == -1) return;
 
@@ -33,8 +32,6 @@ const draw = (tab, group) => {
         pars = other.amount / 2;
         other = other.name;
     }
-
-    console.log(other);
 
     let x = 50, y = 70;
 
@@ -134,6 +131,21 @@ const draw = (tab, group) => {
 
         }
     }
+
+    let text = "Ten węglowodór to: ";
+    switch(group){
+        case 1:
+            text += "alkan";
+            break;
+        case 2:
+            text += "alken";
+            break;
+        case 3:
+            text += "alkin";
+            break;
+    }
+
+    result.innerHTML += `<div style="bottom:10px;left:10px">${text}</div>`;
     
 }
 
@@ -165,26 +177,30 @@ const createTab = (str) => {
         }
 
         // Is double letter
-        let isSmall = false;
         if (str[i + 1] != null) {
             if (str[i + 1] != "(" && str[i + 1] != ")" && isNaN(str[i + 1] * 1)) {
                 var a = str[i + 1];
                 var b = a.toLowerCase();
 
-                isSmall = (a == b);
+                if (a == b) {
+                    elName += str[i + 1];
+                    i++;
+                }
             }
         }
-
+        
         // Element amount
-        if (isSmall) {
-            elName += str[i + 1];
-            i++;
-        }
-
         if (str[i + 1] != null) {
             if (!isNaN(str[i + 1] * 1)) {
                 elAmount = parseInt(str[i + 1]);
                 i++;
+
+                if (str[i + 1] != null) {
+                    if (!isNaN(str[i + 1] * 1)) {
+                        elAmount = elAmount * 10 + parseInt(str[i + 1]);
+                        i++;
+                    }
+                }
             }
         }
 
@@ -222,7 +238,6 @@ const createTab = (str) => {
     })
 
     
-    console.log(molElements);
     return molElements;
 }
 
@@ -269,7 +284,6 @@ const isHydrocarbon = (tab) => {
         }
     }
 
-    console.log(tab.length);
     if(hasH && hasC && tab.length < 4) return true;
     return false;
 }
